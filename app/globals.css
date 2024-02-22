@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255; /* Adjusted for dark mode */
+  --background-start-rgb: 13, 9, 19; /* Further Darkened Deep Purple */
+  --background-end-rgb: 19, 9, 18; /* Further Darkened Dark Violet */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 23, 6, 22; /* Further Darkened Plum */
+    --background-end-rgb: 36, 6, 19; /* Further Darkened Dark Magenta */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #007bff; /* Dark Magenta */
+  border-radius: 5px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #007bff; /* Dark Magenta */
+  border-radius: 5px;
+  background-color: #5a315e;
+}
+
+.form-container button {
+  background-color: #3f3163; /* Deep Purple */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #5a315e; /* Dark Violet */
+}
+
+.book-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.book-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.book-list th,
+.book-list td {
+  padding: 8px;
+  border: 1px solid #007bff; /* Plum */
+  text-align: left;
+}
+
+
+.book-list th {
+  background-color: #007bff; /* Maroon */
+}
+
+.book-list tr:nth-child(even) {
+  background-color: #007bff; /* Maroon */
+}
+.book-list tr:hover {
+  background-color: #007bff; /* Crimson Red */
+}
+/* Add this CSS to your styles.css or any other stylesheet */
+
+.book-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.book-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.book-list th,
+.book-list td {
+  padding: 8px;
+  border: 1px solid #5a0d5a; /* Plum */
+  text-align: left;
+}
+.book-list th {
+  background-color: #1e70c9; /* Maroon */
+}
+.book-list tr:nth-child(even) {
+  background-color: #5983af; /* Maroon */
+}
+.book-list tr:hover {
+  background-color: #2363a9; /* Crimson Red */
+}
+
+
+
+.book-edit {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.book-edit h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.book-edit form {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-edit label {
+  margin-bottom: 5px;
+}
+.book-edit input[type="text"],
+.book-edit input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #0e0006; /* Dark Magenta */
+  border-radius: 5px;
+}
+.book-edit button {
+  background-color: #3f3163; /* Deep Purple */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.book-edit button[type="submit"] {
+  margin-right: 10px;
+}
+
+
+.book-edit button[type="submit"]:hover,
+.book-edit button[type="button"]:hover {
+  background-color: #5a315e; /* Dark Violet */
+}
+
+.search-container {
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-box {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #8b264f; /* Dark Magenta */
+  border-radius: 4px;
+}
+.search-button {
+  padding: 8px 16px;
+  background-color: #3f3163; /* Deep Purple */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-list-ul {
+  list-style-type: none;
+  padding: 0;
+}
+.search-list-ul li {
+  margin-bottom: 4px;
+}
+
+.header {
+  background: linear-gradient(to right, #007bff, #5983af); /* Replace with your desired colors */
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Add padding for spacing */
+}
+
+.header-content {
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.search-bar{
+  align-items: center;
+  margin-left: 620px;
+  margin-top: 20px;
+}
+
+.search-button{
+  margin-left: 5px;
+  background: linear-gradient(to right, #007bff, #5983af); 
+}
