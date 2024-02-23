@@ -31,7 +31,7 @@ export default function BookSearch() {
         className="seach-box"
       />
       <button onClick={handleSearch} className="search-button">Search</button>
-      <ul className="search-list-ul">
+      <ul className="search-list-ul text-white">
         {searchResults.map((book) => (
           <li key={book.id}>{book.title} by {book.author}</li>
         ))}
